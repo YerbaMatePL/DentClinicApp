@@ -1,0 +1,61 @@
+.nav {
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: transparent;
+	z-index: 1000;
+	padding: 10px;
+}
+
+.navLinks {
+	display: flex;
+	gap: 30px;
+	text-transform: uppercase;
+}
+
+.navLinks,
+.logo {
+	position: relative;
+	top: 20px;
+}
+
+.logo p {
+	font-family: 'Neon Android', sans-serif;
+}
+
+p {
+	color: var(--textWhite);
+}
+
+a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: var(--textWhite);
+}
+
+a.active {
+	color: var(--main);
+}
+
+a,
+p {
+	transition: transform 0.3s ease;
+}
+
+a:hover,
+.logo p:hover {
+	transform: scale(1.1);
+}
+a:active,
+.logo p:active {
+	transform: scale(0.9);
+}
+
+.logo span {
+	color: var(--main);
+	font-weight: bold;
+}

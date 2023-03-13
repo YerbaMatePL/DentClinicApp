@@ -1,0 +1,107 @@
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 550px;
+	background-color: var(--backgroundForm);
+	box-shadow: 0 0 10px black;
+	margin-top: 10vh;
+	border-radius: 30px;
+}
+
+form {
+	text-align: center;
+	padding: 40px;
+	font-size: 2rem;
+}
+
+form h1 {
+	margin-bottom: 60px;
+}
+
+.formBox {
+	position: relative;
+	color: var(--textWhite);
+	padding: 15px 0px;
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+.formBox input {
+	margin: 0 auto;
+	display: block;
+	width: 60%;
+	height: 30px;
+	background-color: transparent;
+	border: none;
+	color: var(--textWhite);
+	border-bottom: 1px solid var(--textWhite);
+}
+
+.formBox input:focus-visible {
+	outline: none;
+	background-color: rgba(128, 128, 128, 0.212);
+}
+
+.formBox label {
+	width: 60%;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: transform 0.3s ease;
+}
+
+.formBox > input:focus + label {
+	transform: translate(-50%, -160%);
+}
+.formBox > input:valid + label {
+	transform: translate(-50%, -160%);
+}
+
+.errorText {
+	font-size: 1.5rem;
+	color: rgb(243, 91, 91);
+	display: none;
+}
+
+.btn {
+	padding: 10px 20px;
+	margin-top: 30px;
+	font-size: 1.5rem;
+	width: 100%;
+	max-width: 250px;
+	min-width: 150px;
+	background: var(--success);
+	color: var(--textWhite);
+	border-radius: 30px;
+	border: none;
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+
+.btn:hover,
+.loginContainer a:hover {
+	transform: scale(1.1);
+}
+
+.btn:active,
+.loginContainer a:active {
+	transform: scale(0.9);
+}
+
+.loginContainer {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.loginContainer p {
+	font-size: 1.5rem;
+}
+
+.loginContainer a {
+	display: inline-block;
+	color: var(--main);
+	transition: transform 0.3s ease;
+}

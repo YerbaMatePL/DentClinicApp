@@ -1,0 +1,50 @@
+.heroImg {
+	position: relative;
+	height: 100vh;
+	z-index: -2;
+}
+
+.heroText {
+	color: var(--textWhite);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	text-align: center;
+	z-index: 5;
+}
+
+.heroText h1 {
+	font-size: 9rem;
+	font-family: 'Neon Android', sans-serif;
+}
+
+p {
+	font-size: 2rem;
+}
+
+span {
+	color: var(--main);
+}
+
+.btnMakeAnAppointment {
+	padding: 15px 30px;
+	margin-top: 50px;
+	font-size: 2rem;
+	background: var(--success);
+	color: var(--textWhite);
+	border-radius: 30px;
+	border: none;
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+
+header,
+.btnMakeAnAppointment:hover {
+	transform: scale(1.1);
+}
+
+.btnMakeAnAppointment:active {
+	transform: scale(0.9);
+}
