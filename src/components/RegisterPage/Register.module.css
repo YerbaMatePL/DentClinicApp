@@ -48,14 +48,6 @@ form h1 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: transform 0.3s ease;
-}
-
-.formBox > input:focus + label {
-	transform: translate(-50%, -160%);
-}
-.formBox > input:valid + label {
 	transform: translate(-50%, -160%);
 }
 
