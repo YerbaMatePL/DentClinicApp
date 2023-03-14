@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import style from './Register.module.css';
 
 interface FormInitialValues {
@@ -21,35 +22,24 @@ const onSubmit = (values: FormInitialValues, { resetForm }: any) => {
 	resetForm(initialValues);
 };
 
-const validate = (values: FormInitialValues) => {
-	let errors: any = {};
-
-	if (!values.username) {
-		errors.username = 'Pole jest wymagane. Uzupełnij dane.';
-	}
-	if (!values.email) {
-		errors.email = 'Wpisz adres e-mail.';
-	} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-		errors.email = 'Wpisz adres e-mail.';
-	}
-	if (!values.password) {
-		errors.password = 'Wpisz hasło. Powinno składać się minimum z 8 znaków.';
-	} else if (values.password.length < 8) {
-		errors.password = 'Wpisz hasło. Powinno składać się minimum z 8 znaków.';
-	}
-	if (!values.repeatedPassword) {
-		errors.repeatedPassword = 'Pole jest wymagane. Uzupełnij dane.';
-	} else if (values.repeatedPassword !== values.password) {
-		errors.repeatedPassword = 'Hasła nie są identyczne.';
-	}
-	return errors;
-};
+const validationSchema = Yup.object({
+	username: Yup.string().required('Pole jest wymagane. Uzupełnij dane.'),
+	email: Yup.string()
+		.email('Wpisz poprawny adres e-mail.')
+		.required('Wpisz adres e-mail.'),
+	password: Yup.string()
+		.min(8, 'Wpisz hasło. Powinno składać się minimum z 8 znaków.')
+		.required('Wpisz hasło. Powinno składać się minimum z 8 znaków.'),
+	repeatedPassword: Yup.string()
+		.required('Pole jest wymagane. Uzupełnij dane.')
+		.oneOf([Yup.ref('password')], 'Hasła nie są identyczne.'),
+});
 
 export const Register = () => {
 	const formik = useFormik({
 		initialValues,
 		onSubmit,
-		validate,
+		validationSchema,
 	});
 
 	return (
