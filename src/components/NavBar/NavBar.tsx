@@ -6,7 +6,7 @@ const NavBar = () => {
 	return (
 		<nav className={style.nav}>
 			<div className={style.logo}>
-				<NavLink to='/' title='Strona główna'>
+				<NavLink to='/DentClinicApp/' title='Strona główna'>
 					<p>
 						<span>Dent</span>Clinic
 					</p>
