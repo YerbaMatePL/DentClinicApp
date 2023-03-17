@@ -1,0 +1,5 @@
+a.active {
+	color: var(--main);
+	border-bottom: 3px inset #0f3c59;
+	border-radius: 0px 0px 5px 5px;
+}
