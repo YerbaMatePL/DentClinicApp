@@ -4,6 +4,7 @@ import HomePage from './components/HomePage/HomePage';
 import Login from './components/LoginPage/Login';
 import NavBar from './components/NavBar/NavBar';
 import Register from './components/RegisterPage/Register';
+import CalendarPage from './components/CalendarPage/CalendarPage';
 
 function App() {
 	return (
@@ -11,8 +12,9 @@ function App() {
 			<NavBar />
 			<Routes>
 				<Route path='/DentClinicApp' element={<HomePage />} />
-				<Route path='/login' element={<Login />} />
-				<Route path='/register' element={<Register />} />
+				<Route path='/logowanie' element={<Login />} />
+				<Route path='/rejestracja' element={<Register />} />
+				<Route path='/kalendarz' element={<CalendarPage />} />
 			</Routes>
 		</div>
 	);

@@ -1,6 +1,12 @@
 import style from './Header.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+	const navigate = useNavigate();
+
+	const goToCalendarPage = () => {
+		navigate('/kalendarz');
+	};
 	return (
 		<header>
 			<div className={style.heroImg}>
@@ -11,7 +17,12 @@ const Header = () => {
 					<p>
 						Witaj w klinice stomatologicznej - w miejscu, gdzie leczymy z pasją
 					</p>
-					<button className={style.btnMakeAnAppointment}>Umów się na wizytę</button>
+					<button
+						className={style.btnMakeAnAppointment}
+						onClick={goToCalendarPage}
+					>
+						Umów się na wizytę
+					</button>
 				</div>
 			</div>
 		</header>

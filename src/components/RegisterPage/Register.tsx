@@ -116,7 +116,7 @@ export const Register = () => {
 			</form>
 			<div className={style.loginContainer}>
 				<p>
-					Masz już konto?&nbsp; <Link to='../login'>Zaloguj się</Link>
+					Masz już konto?&nbsp; <Link to='../logowanie'>Zaloguj się</Link>
 				</p>
 			</div>
 		</div>

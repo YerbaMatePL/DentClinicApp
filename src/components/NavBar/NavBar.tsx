@@ -13,8 +13,8 @@ const NavBar = () => {
 				</NavLink>
 			</div>
 			<div className={style.navLinks}>
-				<NavLink to='login'>Logowanie</NavLink>
-				<NavLink to='register'>Rejestracja</NavLink>
+				<NavLink to='logowanie'>Logowanie</NavLink>
+				<NavLink to='rejestracja'>Rejestracja</NavLink>
 			</div>
 		</nav>
 	);
