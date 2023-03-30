@@ -6,9 +6,18 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: transparent;
 	z-index: 1000;
 	padding: 10px;
+	transition-duration: 0.3s;
+}
+
+.navTransparent {
+	background-color: transparent;
+}
+
+.navWithBackground {
+	background-color: rgb(34, 34, 36);
+	box-shadow: 0 0 10px rgb(126, 125, 125);
 }
 
 .navLinks {
@@ -20,7 +29,6 @@
 .navLinks,
 .logo {
 	position: relative;
-	top: 20px;
 }
 
 .logo p {
