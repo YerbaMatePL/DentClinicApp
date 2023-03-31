@@ -21,7 +21,7 @@ const CalendarPage = () => {
 						<span>{days[new Date(day.date).getDay()]}</span>
 						<p>
 							{new Date(day.date).getDate()} {''}{' '}
-							{months[new Date(day.date).getDay()]}
+							{months[new Date(day.date).getMonth()]}
 						</p>
 					</div>
 					{day.slots.map((slot) => (
