@@ -4,7 +4,7 @@ let currentDays: Date[] = [];
 
 let day = new Date();
 
-const getCurrentDays = () => {
+const getCurrentWeek = () => {
 	for (let i = currentDays.length; i < 5; i++) {
 		let nextDay = new Date(day);
 		!currentDays.includes(nextDay) && currentDays.push(nextDay);
@@ -12,8 +12,8 @@ const getCurrentDays = () => {
 	}
 };
 
-export const getCurrentCalendar = () => {
-	getCurrentDays();
+export const getDataForTheSchedule = () => {
+	getCurrentWeek();
 
 	let formattedDates: string[];
 
@@ -26,7 +26,7 @@ export const getCurrentCalendar = () => {
 	formatDate(currentDays);
 
 	const currentDates = timeSlots.filter((timeSlot) =>
-		formattedDates.includes(new Date(timeSlot.data).toISOString().slice(0, 10))
+		formattedDates.includes(new Date(timeSlot.date).toISOString().slice(0, 10))
 	);
 
 	return currentDates;

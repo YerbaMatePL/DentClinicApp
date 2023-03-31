@@ -40,8 +40,19 @@
 }
 
 .tableHeader {
+	display: flex;
+	flex-direction: column;
 	height: 40px;
 	font-size: 1.3rem;
+}
+
+.tableHeader p {
+	font-size: .9rem;
+	color: rgb(214, 216, 213);
+}
+
+.tableHeader span {
+	color: whitesmoke;
 }
 
 .hour {
