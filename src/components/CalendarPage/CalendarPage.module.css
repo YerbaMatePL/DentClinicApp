@@ -1,0 +1,75 @@
+.container {
+	margin: 0 auto;
+	margin-top: 12vh;
+	width: 950px;
+	min-width: 500px;
+	padding: 20px 40px;
+	background-color: var(--backgroundForm);
+	box-shadow: 0 0 10px black;
+	border-radius: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.col {
+	width: 155px;
+}
+
+.col:first-child {
+	width: 110px;
+}
+
+.cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 10px;
+	height: 70px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.1rem;
+	color: var(--infoColor);
+	overflow-wrap: break-word;
+	border-bottom: 1px solid rgba(221, 221, 221, 0.151);
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+}
+
+.cell:first-child {
+	font-weight: bold;
+}
+
+.tableHeader {
+	display: flex;
+	flex-direction: column;
+	height: 40px;
+	font-size: 1.3rem;
+}
+
+.tableHeader p {
+	font-size: .9rem;
+	color: rgb(214, 216, 213);
+}
+
+.tableHeader span {
+	color: whitesmoke;
+}
+
+.hour {
+	font-weight: bold;
+}
+
+.free {
+	background-color: #1bcebf4f;
+	cursor: pointer;
+	box-shadow: inset 2px 2px 16px -5px rgba(154, 168, 144, 0.801);
+}
+
+.free:hover {
+	background-color: rgba(4, 107, 76, 0.966);
+}
+.booked {
+	background-color: #edf2f31f;
+	box-shadow: inset 2px 2px 16px -5px rgba(26, 25, 25, 0.801);
+	color: rgb(154, 160, 155);
+}
