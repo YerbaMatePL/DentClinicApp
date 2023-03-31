@@ -9,6 +9,7 @@
 	border-radius: 30px;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 10vh;
 }
 
 .col {
@@ -47,7 +48,7 @@
 }
 
 .tableHeader p {
-	font-size: .9rem;
+	font-size: 0.9rem;
 	color: rgb(214, 216, 213);
 }
 
